@@ -1,0 +1,181 @@
+
+@font-face {
+    font-family: orbit;
+    src: url(../../src/fonts/Orbitron-VariableFont_wght.ttf);
+}
+
+/* ====================================================================
+                                RESET
+=====================================================================*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ====================================================================
+                                main
+=====================================================================*/
+
+
+body {
+    background-color: rgb(55, 55, 55);
+    padding-top: 10vh ;
+    padding-inline: 8vw;
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 64px;
+        text-align: center;
+
+        .HomeContainer {
+
+            fieldset {
+                border: 5px solid #97F5BB;
+            }
+        }
+        .AwayContainer {
+            fieldset {
+
+                border: 5px solid #525DF4;
+            }
+        }
+
+        .score {
+            fieldset {
+                padding: 34px;
+                text-align: center;
+                max-width: 34vw;
+                aspect-ratio: 1/1;
+                border-radius: 16px;
+                margin: 0 auto;
+                position: relative;
+
+                legend {
+                    font-size: 2rem;
+                    position: absolute;
+                    background-color: rgb(55, 55, 55);
+                    bottom: -20px;
+                    left: 50%;
+                    transform: translate(-50%);
+                    color: white;
+                    padding: 5px;
+                }
+                
+                div {
+                    background-color: black;
+                    width: 100%;
+                    height: 100%;
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: clamp(2rem, 10vw, 7rem);
+                    font-weight: 400;
+                    border-radius: 16px;
+                    font-family: orbit;
+                }
+
+
+            }
+
+        }
+        .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+
+        }
+        
+        .home {
+    
+            button{
+                padding: 1.5rem;
+                background-color: #97F5BB;
+                color: rgb(35, 35, 35);
+                border-radius: 0.5rem;
+                font-size: 2rem;
+                border: none;
+            }
+        }
+
+        .away {
+            button{
+                padding: 1.5rem;
+                background-color: #525DF4;
+                color: rgb(35, 35, 35);
+                border-radius: 0.5rem;
+                font-size: 2rem;
+                border: none;
+            }
+        }
+        .modalHolder {
+            width: 100vw;
+            height: 100vh;
+            display: none;
+            position: fixed;
+            .modal {
+                width: 30vw;
+                height: 25vh;
+                background-color: gray;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 2rem;
+                border-radius: 1rem;
+                position: fixed;
+                top: 20vh;
+                left: 50%;
+                transform: translate(-50%);
+
+                input {
+                    max-width: 50%;
+                    font-size: 1rem;
+                    padding: 0.3125rem;
+                    &[type="submit"] {
+                        background-color: rgb(255, 255, 255);
+                        padding: 0.3rem 2rem;
+                        display: inline-block;
+                        border-radius: 8px;
+                        border: none;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        
+    }
+    footer {
+        text-align: center;
+        margin-top: 4rem;
+        a {
+            background-color: rgb(255, 255, 255);
+            padding: 1rem 3rem;
+            display: inline-block;
+            border-radius: 8px;
+        }
+        button {
+            background-color: rgb(255, 255, 255);
+            padding: 1.11rem 2rem;
+            display: inline-block;
+            border-radius: 8px;
+            border: none;
+            margin-left: 8px;
+        }
+    }
+}
